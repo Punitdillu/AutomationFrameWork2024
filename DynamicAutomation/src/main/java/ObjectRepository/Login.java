@@ -5,13 +5,14 @@ import org.openqa.selenium.WebDriver;
 
 import GenericUtility.Findelement;
 import GenericUtility.WaitFunctions;
+import GenericUtility.WebDriverUtility;
 
 
 public class Login {
 
 	Findelement ele = new Findelement();
-	WaitFunctions wait = new WaitFunctions();
-	
+	//WaitFunctions wait = new WaitFunctions();
+	WebDriverUtility wait = new WebDriverUtility();
 	
 
 	private final By userName= By.xpath("//input[@name='user_name']");
@@ -29,15 +30,15 @@ public void  login(WebDriver driver) throws InterruptedException
 	driver.get("http://localhost:8888");
 	Thread.sleep(7000);
 	
-	wait.webdriverWait((userName), driver,30);
+	wait.waitForElementToBeClickable(driver,userName, 30);
 	ele.element(driver,userName).sendKeys("admin");
 	ele.element(driver,userName).clear();
 	ele.element(driver,userName).sendKeys("admin");
 	
-	wait.webdriverWait((passWord), driver,30);
+	wait.waitForElementToBeClickable(driver,(passWord), 30);
 	ele.element(driver,passWord).sendKeys("root");
 	
-	wait.webdriverWait((loginButton), driver,30);
+	wait.waitForElementToBeClickable( driver,(loginButton),30);
 	ele.element(driver,loginButton).click();
 }
 
@@ -45,9 +46,9 @@ public void  login(WebDriver driver) throws InterruptedException
 
 public void  Logout(WebDriver driver)
 {
-	wait.webdriverWait((LogOutIcon), driver,30);
+	wait.waitForElementToBeClickable(driver,(LogOutIcon), 30);
 	ele.element(driver,LogOutIcon).click();
-	wait.webdriverWait((LogOutButton), driver,30);
+	wait.waitForElementToBeClickable( driver,(LogOutButton),30);
 	ele.element(driver,LogOutButton).click();
 	
 	

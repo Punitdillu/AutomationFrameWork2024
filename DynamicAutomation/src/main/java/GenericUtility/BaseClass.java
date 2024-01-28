@@ -2,6 +2,7 @@ package GenericUtility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -33,8 +34,8 @@ public class BaseClass {
 	@BeforeClass
     public void LaunchBrowser() {
 		
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		WebDriverManager.firefoxdriver().setup();;
+		driver = new FirefoxDriver();
 		
 		System.out.println("Browser Launched");
 	}
