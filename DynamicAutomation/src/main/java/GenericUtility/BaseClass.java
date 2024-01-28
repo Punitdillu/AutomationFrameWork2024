@@ -2,6 +2,7 @@ package GenericUtility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -12,14 +13,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import ObjectRepository.Login;
+import GenericFunctions.LoginLogoutFunctions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	
+	LoginLogoutFunctions ln = new LoginLogoutFunctions();
+	PropertyFileUtitlity pfile = new PropertyFileUtitlity();
 	public WebDriver driver=null;
-	Login ln = new Login();
-
+	
 	@BeforeSuite
      public void database_connection() {
 		
@@ -32,18 +33,36 @@ public class BaseClass {
 	}
 	
 	@BeforeClass
-    public void LaunchBrowser() {
-		
-		WebDriverManager.firefoxdriver().setup();;
-		driver = new FirefoxDriver();
-		
-		System.out.println("Browser Launched");
+    public void LaunchBrowser() throws Throwable {
+		String browserName=pfile.getCommonProperty("browser");
+
+		if(browserName.equals("chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
+		}
+		else if(browserName.equals("firefox"))
+		{
+			WebDriverManager.firefoxdriver().setup();
+			driver=new FirefoxDriver();
+		}
+		else if(browserName.equals("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
+		}
+		else {
+			throw new Exception("not campatible browser");
+
+		}
 	}
 	
 	@BeforeMethod
     public void LoginApp() throws Throwable {
 		
-		ln.login(driver);
+		String Username = pfile.getCommonProperty("username");
+		String Password = pfile.getCommonProperty("password");
+		String url= pfile.getCommonProperty("url");
+		ln.login(driver,Username,Password,url);
 		System.out.println("Login Completed");
 	}
 	
@@ -56,7 +75,7 @@ public class BaseClass {
 	
 	@AfterClass
     public void CloseBrowser() {
-		driver.close();
+		driver.quit();
 		System.out.println("Browser Closed");
 	}
 	

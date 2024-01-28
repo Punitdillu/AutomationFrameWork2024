@@ -28,6 +28,7 @@ public class WebDriverUtility {
 	 * @param driver
 	 */
 	
+	@SuppressWarnings("deprecation")
 	public void waitForPageToLoad(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
@@ -36,6 +37,7 @@ public class WebDriverUtility {
 	 * element in DOM [HTML-Document]
 	 * @param
 	 */
+	@SuppressWarnings("deprecation")
 	public void waitForPageToLoadJSElement(WebDriver driver) {
 		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
 
@@ -60,7 +62,7 @@ public class WebDriverUtility {
 	 * @throws Throwable 
      */
 	public void waitForElementWithCumtomTimeOut(WebDriver driver, WebElement element, int pollingTime) throws Throwable {
-		FluentWait wait = new FluentWait(driver);
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		/**wait.pollingEvery(pollingTime, TimeUnit.SECONDS);*/
 		wait.wait(20);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -214,5 +216,12 @@ public class WebDriverUtility {
 			driver.switchTo().alert().dismiss();
 		}
 
-
+		/**
+		    * this method use to accept the alert popup
+		    * @param driver
+		    */
+			public WebElement element(WebDriver driver, By by) {
+				WebElement ele = driver.findElement(by);
+				return ele;
+			}
 }
