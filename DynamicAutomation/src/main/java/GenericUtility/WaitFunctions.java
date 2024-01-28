@@ -1,4 +1,4 @@
-package WebDriverUtility;
+package GenericUtility;
 
 import java.time.Duration;
 
