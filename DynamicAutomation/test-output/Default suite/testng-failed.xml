@@ -13,8 +13,7 @@
           <include name="closeexecutionMode"/>
           <include name="LaunchBrowser"/>
           <include name="LoginApp"/>
-          <include name="createOpp"/>
-          <include name="vcreateContact"/>
+          <include name="createContact"/>
         </methods>
       </class> <!-- JavaSelenium.ReleaseJan -->
     </classes>

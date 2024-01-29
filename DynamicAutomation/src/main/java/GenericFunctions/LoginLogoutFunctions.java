@@ -16,14 +16,14 @@ public class LoginLogoutFunctions {
 		
 		driver.get(url);
 		
-		wD.waitForElementToBeClickable(driver,lobj.userName, 30);
+		wD.waitForElementToBeVisible(driver,lobj.userName, 30);
 		
 		wD.element(driver,lobj.userName).sendKeys(username);
 		
-		wD.waitForElementToBeClickable(driver,lobj.passWord, 30);
+		wD.waitForElementToBeVisible(driver,lobj.passWord, 30);
 		wD.element(driver,lobj.passWord).sendKeys(password);
 		
-		wD.waitForElementToBeClickable( driver,lobj.loginButton,30);
+		wD.waitForElementToBeVisible( driver,lobj.loginButton,30);
 		wD.element(driver,lobj.loginButton).click();
 	}
 
@@ -31,9 +31,9 @@ public class LoginLogoutFunctions {
 
 	public void  Logout(WebDriver driver)
 	{
-		wD.waitForElementToBeClickable(driver,(lobj.LogOutIcon), 30);
+		wD.waitForElementToBeVisible(driver,(lobj.LogOutIcon), 30);
 		wD.element(driver,lobj.LogOutIcon).click();
-		wD.waitForElementToBeClickable( driver,(lobj.LogOutButton),30);
+		wD.waitForElementToBeVisible( driver,(lobj.LogOutButton),30);
 		wD.element(driver,lobj.LogOutButton).click();
 		
 		

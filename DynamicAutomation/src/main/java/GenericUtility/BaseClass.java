@@ -20,7 +20,8 @@ public class BaseClass {
 	LoginLogoutFunctions ln = new LoginLogoutFunctions();
 	PropertyFileUtitlity pfile = new PropertyFileUtitlity();
 	public WebDriver driver=null;
-	
+	public static WebDriver sdriver;
+
 	@BeforeSuite
      public void database_connection() {
 		
@@ -54,6 +55,7 @@ public class BaseClass {
 			throw new Exception("not campatible browser");
 
 		}
+		sdriver=driver;
 	}
 	
 	@BeforeMethod

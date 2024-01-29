@@ -23,7 +23,7 @@ public class ExcelDataUtility {
 	
 	public String getExcelsheetdata(String sheetName,int rowNum,int cellNum) throws IOException {
 		
-		FileInputStream fie= new FileInputStream("./src/main/resources/DATA/data.xlsx");
+		FileInputStream fie= new FileInputStream("./src/main/resources/DATA/AutomationData.xlsx");
 		Workbook wb=WorkbookFactory.create(fie);
 		Sheet sh = wb.getSheet(sheetName);
 		Row r=sh.getRow(rowNum);
