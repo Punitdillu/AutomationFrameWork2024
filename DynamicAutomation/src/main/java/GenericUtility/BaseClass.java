@@ -13,13 +13,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import GenericFunctions.LoginLogoutFunctions;
+import ObjectRepository.Login;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	LoginLogoutFunctions ln = new LoginLogoutFunctions();
 	PropertyFileUtitlity pfile = new PropertyFileUtitlity();
-	public WebDriver driver=null;
+	public  WebDriver driver=null;
 	public static WebDriver sdriver;
 
 	@BeforeSuite
@@ -60,17 +59,20 @@ public class BaseClass {
 	
 	@BeforeMethod
     public void LoginApp() throws Throwable {
+		Login ln = new Login(driver);
 		
 		String Username = pfile.getCommonProperty("username");
 		String Password = pfile.getCommonProperty("password");
 		String url= pfile.getCommonProperty("url");
 		ln.login(driver,Username,Password,url);
 		System.out.println("Login Completed");
+		
 	}
 	
 
 	@AfterMethod
     public void LogOutApp() {
+		Login ln = new Login(driver);
 		ln.Logout(driver);
 		System.out.println("Logout Completed");
 	}

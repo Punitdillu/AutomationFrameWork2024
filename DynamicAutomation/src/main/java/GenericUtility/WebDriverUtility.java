@@ -47,11 +47,10 @@ public class WebDriverUtility {
 	 * every 500 milli seconds
 	 * @param
 	 */
-	public void waitForElementToBeVisible(WebDriver driver, By element, int time) {
+	public void waitForElementToBeVisible(WebDriver driver, WebElement element, int time) {
 		
-		//WebDriverWait wait = new WebDriverWait(driver, 20);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+		wait.until(ExpectedConditions.visibilityOf(element));
 
 	}
 	  /**
@@ -96,11 +95,11 @@ public class WebDriverUtility {
 	 * @param driver
 	 * @param element
 	 */
-		public void mouseOverOnElement(WebDriver driver, By element)
+		public void mouseOverOnElement(WebDriver driver, WebElement element)
 		{
 			
 			Actions act=new Actions(driver);
-			act.moveToElement(element(driver, element)).perform();
+			act.moveToElement(element).perform();
 		}
 		public void getmaxSizeWindow(WebDriver driver) {
 			driver.manage().window().maximize();
@@ -220,8 +219,7 @@ public class WebDriverUtility {
 		    * this method use to accept the alert popup
 		    * @param driver
 		    */
-			public WebElement element(WebDriver driver, By by) {
-				WebElement ele = driver.findElement(by);
+			public WebElement element(WebDriver driver, WebElement ele) {
 				return ele;
 			}
 }
