@@ -1,9 +1,13 @@
 package GenericUtility;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -28,9 +32,20 @@ public class WebDriverUtility {
 	 * @param driver
 	 */
 	
-	@SuppressWarnings("deprecation")
 	public void waitForPageToLoad(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	}
+	
+	/**
+	 * Java Wait , worked as waiting for a fixed time
+	 * @param Second
+	 * @throws InterruptedException 
+	 */
+	
+	public void ThinkTime(int second) throws InterruptedException {
+		
+		Thread.sleep(second * 1000);
 	}
 	/**
 	 * wait for page to load before identifying any asynchronized [java scripts actions] 
@@ -39,7 +54,7 @@ public class WebDriverUtility {
 	 */
 	@SuppressWarnings("deprecation")
 	public void waitForPageToLoadJSElement(WebDriver driver) {
-		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(20));
 
 	}
 	/**
@@ -60,10 +75,11 @@ public class WebDriverUtility {
      * @param pollingTime in the form second
 	 * @throws Throwable 
      */
-	public void waitForElementWithCumtomTimeOut(WebDriver driver, WebElement element, int pollingTime) throws Throwable {
+	public void fluentWait(WebDriver driver, WebElement element, int pollingTime, int timeout) throws Throwable {
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		/**wait.pollingEvery(pollingTime, TimeUnit.SECONDS);*/
-		wait.wait(20);
+		wait.pollingEvery(Duration.ofSeconds(pollingTime));
+		wait.withTimeout(Duration.ofSeconds(timeout));
+		wait.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		
 	}
@@ -222,4 +238,21 @@ public class WebDriverUtility {
 			public WebElement element(WebDriver driver, WebElement ele) {
 				return ele;
 			}
+			
+			/**
+			    * this method use to perform Keyboard Action
+			    * @param Key
+			    */
+			public void keyPress(int Key) throws AWTException
+			{
+				Robot r = new Robot();
+				r.keyPress(Key);
+			}
+			public void keyRelease(int Key) throws AWTException
+			{
+				Robot r = new Robot();
+				r.keyRelease(Key);
+			}
 }
+
+

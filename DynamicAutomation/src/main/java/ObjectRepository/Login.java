@@ -36,9 +36,10 @@ public class Login {
 	//Method to log in 
 	public void  login(WebDriver driver, String username, String password,String url) throws InterruptedException 
 	{
-		driver.manage().window().maximize();
 		
 		driver.get(url);
+		wD.waitForPageToLoad(driver);
+		wD.getmaxSizeWindow(driver);
 		
 		wD.waitForElementToBeVisible(driver,userName, 30);
 		

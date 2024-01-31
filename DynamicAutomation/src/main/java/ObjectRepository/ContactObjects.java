@@ -49,7 +49,7 @@ public class ContactObjects {
 		return contactCreated;
 	}
 	
-	//Business logic
+	//****Business logic****//
 	
 	public void clickOnContactHeader(WebDriver driver) {
 		wu.waitForElementToBeVisible(driver, contactHeader, 20);
@@ -88,35 +88,5 @@ public class ContactObjects {
     		}
 	}
 	
-//	public void createNewContact(WebDriver driver ,String LastNameVal) throws InterruptedException 
-//	{
-//		wu.waitForElementToBeVisible(driver, ContactHeader, 20);
-//		wu.mouseOverOnElement(driver, ContactHeader);
-//		wu.element(driver, ContactHeader).click();
-//		
-//		wu.waitForElementToBeVisible(driver, ContactNewIcon, 20);
-//		wu.mouseOverOnElement(driver, ContactNewIcon);
-//		wu.element(driver, ContactNewIcon).click();
-//		
-//		wu.waitForElementToBeVisible(driver, LastName, 20);
-//		wu.mouseOverOnElement(driver, LastName);
-//		wu.element(driver, LastName).sendKeys(LastNameVal);
-//		
-//		wu.waitForElementToBeVisible(driver, SaveButton, 20);
-//		wu.mouseOverOnElement(driver, SaveButton);
-//		wu.element(driver, SaveButton).click();
-//		
-//		wu.waitForElementToBeVisible(driver, ContactCreated, 20);
-//		wu.mouseOverOnElement(driver, ContactCreated);
-//		
-//		if(wu.element(driver, ContactCreated).getText().contains(LastNameVal))
-//		{
-//			System.out.println("Contact created");
-//		}
-//		else
-//		{
-//			Assert.fail("Contact not created");
-//
-//		}
-//	}
+
 }
