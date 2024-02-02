@@ -87,6 +87,16 @@ public class WebDriverUtility {
 
 	/**
 	 * this method is used to switch to any window based on window title
+	 * @param driver 
+	 */
+	
+	public void switchToWindowForOnlyOneWindow(WebDriver driver)
+	{
+		driver.getWindowHandle();
+	}
+		
+	/**
+	 * this method is used to switch to any window based on window title
 	 * @param driver
 	 * @param partialWindowTitle
 	 */
@@ -229,6 +239,26 @@ public class WebDriverUtility {
 		public void HandleAlertpopupsDismiss(WebDriver driver) {
 			
 			driver.switchTo().alert().dismiss();
+		}
+		
+		/**
+		    * this method use to send a value to the alert popup
+		    * @param driver
+		    */
+
+		public void HandleAlertpopupsSendValue(WebDriver driver, String string) {
+			
+			driver.switchTo().alert().sendKeys(string);
+		}
+		
+		/**
+		    * this method use to get text value of  the alert popup
+		    * @param driver
+		    */
+
+		public void HandleAlertpopupsGetText(WebDriver driver) {
+			
+			driver.switchTo().alert().getText();
 		}
 
 		/**

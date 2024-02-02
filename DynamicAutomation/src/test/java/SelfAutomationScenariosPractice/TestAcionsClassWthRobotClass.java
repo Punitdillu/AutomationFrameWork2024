@@ -36,6 +36,7 @@ public class TestAcionsClassWthRobotClass {
 	    wu.ThinkTime(1);
 	    
 	    wu.switchToWindow(driver, "Gmail: Private and secure email");
+	    
 	    String title = driver.getTitle();
 	    System.out.println(title);
 	 // open new Window
