@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SelfAutomationScenariosPractice.ScrollScenarios">
+      <class name="SelfAutomationScenariosPractice.DownloadScenario">
         <methods>
-          <include name="scrollUpAndDown"/>
+          <include name="UploadFile"/>
         </methods>
-      </class> <!-- SelfAutomationScenariosPractice.ScrollScenarios -->
+      </class> <!-- SelfAutomationScenariosPractice.DownloadScenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
