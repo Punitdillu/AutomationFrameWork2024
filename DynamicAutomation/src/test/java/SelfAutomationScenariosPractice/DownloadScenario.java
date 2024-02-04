@@ -29,7 +29,7 @@ public class DownloadScenario {
 	    
 	    //Setting Path to folder, where to download
 	    ChromeOptions option = new ChromeOptions();
-	    Map<String, Object> pref = new HashMap<String, Object>();
+	     HashMap<String, String> pref = new HashMap<String, String>();
 	    
 	    //Setting directory to download
 	    pref.put("download.default_directory", "C:\\Users\\Dell\\git\\AutomationFrameWork2024\\DynamicAutomation\\Downloads");

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SelfAutomationScenariosPractice.DownloadScenario">
+      <class name="SelfAutomationScenariosPractice.BrowserNativePopupHandling">
         <methods>
-          <include name="UploadFile"/>
+          <include name="popupHandlingBrowserNative"/>
         </methods>
-      </class> <!-- SelfAutomationScenariosPractice.DownloadScenario -->
+      </class> <!-- SelfAutomationScenariosPractice.BrowserNativePopupHandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

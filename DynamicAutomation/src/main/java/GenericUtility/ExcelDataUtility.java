@@ -81,13 +81,13 @@ public int getRowCountExcelsheetdata(String sheetName) throws IOException {
 
 public void getRowCountExcelsheetdata(String sheetName,int row,int cell,String data) throws IOException {
 	
-	FileInputStream fie= new FileInputStream(".//DATA/opportunitywithorganisation.xlsx");
+	FileInputStream fie= new FileInputStream("./src/main/resources/DATA/AutomationData.xlsx");
 	Workbook wb=WorkbookFactory.create(fie);
 	Sheet sh = wb.getSheet(sheetName);
 	Row rowNum = sh.getRow(row);
 	Cell cellvalue = rowNum.createCell(cell);
 	cellvalue.setCellValue(data);
-	FileOutputStream fos=new FileOutputStream(".//DATA/opportunitywithorganisation.xlsx");
+	FileOutputStream fos=new FileOutputStream("./src/main/resources/DATA/AutomationData.xlsx");
 	wb.write(fos);
 	wb.close();
 	

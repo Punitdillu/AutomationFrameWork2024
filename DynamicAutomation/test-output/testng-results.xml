@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-03T11:22:39 IST" name="Default suite" finished-at="2024-02-03T11:23:07 IST" duration-ms="27827">
+  <suite started-at="2024-02-04T10:32:22 IST" name="Default suite" finished-at="2024-02-04T10:32:59 IST" duration-ms="36421">
     <groups>
     </groups>
-    <test started-at="2024-02-03T11:22:39 IST" name="Default test" finished-at="2024-02-03T11:23:07 IST" duration-ms="27827">
-      <class name="SelfAutomationScenariosPractice.DownloadFileUsingFireFox">
-        <test-method signature="downloadFile()[pri:0, instance:SelfAutomationScenariosPractice.DownloadFileUsingFireFox@74751b3]" started-at="2024-02-03T11:22:39 IST" name="downloadFile" finished-at="2024-02-03T11:23:07 IST" duration-ms="27743" status="PASS">
+    <test started-at="2024-02-04T10:32:22 IST" name="Default test" finished-at="2024-02-04T10:32:59 IST" duration-ms="36421">
+      <class name="SelfAutomationScenariosPractice.FileUpLoadHandling">
+        <test-method signature="UploadFile()[pri:0, instance:SelfAutomationScenariosPractice.FileUpLoadHandling@74751b3]" started-at="2024-02-04T10:32:22 IST" name="UploadFile" finished-at="2024-02-04T10:32:59 IST" duration-ms="36354" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadFile -->
-      </class> <!-- SelfAutomationScenariosPractice.DownloadFileUsingFireFox -->
+        </test-method> <!-- UploadFile -->
+      </class> <!-- SelfAutomationScenariosPractice.FileUpLoadHandling -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
