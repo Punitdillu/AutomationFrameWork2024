@@ -53,7 +53,7 @@ public class Listneres_Implementation_Class  implements ITestListener{
 	public void onStart(ITestContext context) {
 		
 		//Step1: extent report configuration
-		ExtentSparkReporter htmlreport = new ExtentSparkReporter("./target/extentReport"+new JavaUtility().getSystemDateAnadTime().replace(":", "-"));
+		ExtentSparkReporter htmlreport = new ExtentSparkReporter("./target/extentReport "+new JavaUtility().getSystemDateAnadTime().replace(":", "-"));
 		htmlreport.config().setDocumentTitle("com cast automation execution report");
 		htmlreport.config().setReportName("regression execution report");
 		htmlreport.config().setTheme(Theme.STANDARD);

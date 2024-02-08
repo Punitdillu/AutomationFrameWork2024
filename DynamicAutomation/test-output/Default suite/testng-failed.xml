@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SelfAutomationScenariosPractice.BrowserNativePopupHandling">
+      <class name="SelfAutomationScenariosPractice.JdbcProgram">
         <methods>
-          <include name="popupHandlingBrowserNative"/>
+          <include name="addData"/>
         </methods>
-      </class> <!-- SelfAutomationScenariosPractice.BrowserNativePopupHandling -->
+      </class> <!-- SelfAutomationScenariosPractice.JdbcProgram -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
