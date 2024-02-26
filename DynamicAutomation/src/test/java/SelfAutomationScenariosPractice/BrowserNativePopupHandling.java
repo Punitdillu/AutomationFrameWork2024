@@ -17,7 +17,7 @@ public class BrowserNativePopupHandling {
 	public void popupHandlingBrowserNative() throws Throwable 
 	{
 		Random ran = new Random();
-		int randomnum=ran.nextInt(5000,50000);
+		int randomnum=ran.nextInt(50000);
 		ExcelDataUtility ed = new ExcelDataUtility();
 		WebDriver driver;
 	    WebDriverManager.chromedriver().setup();

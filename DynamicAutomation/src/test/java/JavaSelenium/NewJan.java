@@ -12,12 +12,13 @@ import ObjectRepository.ContactObjects;
 
 public class NewJan extends BaseClass {
 
-	ContactObjects co = new ContactObjects(driver);
+	
 	ExcelDataUtility edu = new ExcelDataUtility();
 	JavaUtility ju = new JavaUtility();
 	@Test(retryAnalyzer = GenericUtility.Retry_Analyzer_Implementation_class.class)
-	public  void createContact() throws Throwable 
+	public  void createContactgf() throws Throwable 
 	{
+		ContactObjects co = new ContactObjects(driver);
 		int ran=ju.getRandomNum();
 		String LastName= edu.getExcelsheetdata("Sheet1", 1, 0)+ran;
 		

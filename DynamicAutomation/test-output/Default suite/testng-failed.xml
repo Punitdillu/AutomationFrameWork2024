@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SelfAutomationScenariosPractice.JdbcProgram">
+      <class name="JavaSelenium.ReleaseJan">
         <methods>
-          <include name="addData"/>
+          <include name="LogOutApp"/>
+          <include name="CloseBrowser"/>
+          <include name="closedatabase_connection"/>
+          <include name="executionMode"/>
+          <include name="database_connection"/>
+          <include name="createContactAndValidate"/>
+          <include name="closeexecutionMode"/>
+          <include name="LaunchBrowser"/>
+          <include name="LoginApp"/>
         </methods>
-      </class> <!-- SelfAutomationScenariosPractice.JdbcProgram -->
+      </class> <!-- JavaSelenium.ReleaseJan -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
