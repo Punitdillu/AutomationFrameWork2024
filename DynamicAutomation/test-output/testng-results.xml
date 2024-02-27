@@ -1,49 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-22T09:40:24 IST" name="Default suite" finished-at="2024-02-22T09:40:49 IST" duration-ms="25030">
+  <suite started-at="2024-02-27T09:07:01 IST" name="Suite" finished-at="2024-02-27T09:09:28 IST" duration-ms="147404">
     <groups>
+      <group name="regression">
+        <method signature="ReleaseJan.firstcreateContactAndValidate()[pri:1, instance:JavaSelenium.ReleaseJan@433defed]" name="firstcreateContactAndValidate" class="JavaSelenium.ReleaseJan"/>
+        <method signature="ReleaseJan.secondContactAndValidate()[pri:2, instance:JavaSelenium.ReleaseJan@433defed]" name="secondContactAndValidate" class="JavaSelenium.ReleaseJan"/>
+        <method signature="ReleaseJan.thirdContactAndValidate()[pri:3, instance:JavaSelenium.ReleaseJan@433defed]" name="thirdContactAndValidate" class="JavaSelenium.ReleaseJan"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="NewJan.createContactgf()[pri:0, instance:JavaSelenium.NewJan@514646ef]" name="createContactgf" class="JavaSelenium.NewJan"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="CreateContactWithDataproviderTest.createContactWithDifferentSetsOfData(java.lang.String,java.lang.String)[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" name="createContactWithDifferentSetsOfData" class="JavaSelenium.CreateContactWithDataproviderTest"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-02-22T09:40:24 IST" name="Default test" finished-at="2024-02-22T09:40:49 IST" duration-ms="25030">
-      <class name="JavaSelenium.ReleaseJan">
-        <test-method is-config="true" signature="database_connection()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:24 IST" name="database_connection" finished-at="2024-02-22T09:40:24 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- database_connection -->
-        <test-method is-config="true" signature="executionMode()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:24 IST" name="executionMode" finished-at="2024-02-22T09:40:24 IST" duration-ms="2" status="PASS">
+    <test started-at="2024-02-27T09:07:01 IST" name="Test2" finished-at="2024-02-27T09:08:03 IST" duration-ms="62310">
+      <class name="JavaSelenium.NewJan">
+        <test-method is-config="true" signature="executionMode()[pri:0, instance:JavaSelenium.NewJan@514646ef]" started-at="2024-02-27T09:07:01 IST" name="executionMode" finished-at="2024-02-27T09:07:01 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executionMode -->
-        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:24 IST" name="LaunchBrowser" finished-at="2024-02-22T09:40:29 IST" duration-ms="4718" status="PASS">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:JavaSelenium.NewJan@514646ef]" started-at="2024-02-27T09:07:01 IST" name="LaunchBrowser" finished-at="2024-02-27T09:07:12 IST" duration-ms="10379" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:29 IST" name="LoginApp" finished-at="2024-02-22T09:40:34 IST" duration-ms="4767" status="PASS">
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.NewJan@514646ef]" started-at="2024-02-27T09:07:12 IST" name="LoginApp" finished-at="2024-02-27T09:07:24 IST" duration-ms="12591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginApp -->
-        <test-method signature="createContactAndValidate()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:34 IST" name="createContactAndValidate" finished-at="2024-02-22T09:40:47 IST" duration-ms="13059" status="PASS">
+        <test-method signature="createContactgf()[pri:0, instance:JavaSelenium.NewJan@514646ef]" started-at="2024-02-27T09:07:24 IST" name="createContactgf" finished-at="2024-02-27T09:08:00 IST" duration-ms="35179" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createContactAndValidate -->
-        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:47 IST" name="LogOutApp" finished-at="2024-02-22T09:40:48 IST" duration-ms="1428" status="PASS">
+        </test-method> <!-- createContactgf -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.NewJan@514646ef]" started-at="2024-02-27T09:08:00 IST" name="LogOutApp" finished-at="2024-02-27T09:08:02 IST" duration-ms="2595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogOutApp -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:48 IST" name="CloseBrowser" finished-at="2024-02-22T09:40:49 IST" duration-ms="371" status="PASS">
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:JavaSelenium.NewJan@514646ef]" started-at="2024-02-27T09:08:02 IST" name="CloseBrowser" finished-at="2024-02-27T09:08:03 IST" duration-ms="803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-        <test-method is-config="true" signature="closeexecutionMode()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:49 IST" name="closeexecutionMode" finished-at="2024-02-22T09:40:49 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeexecutionMode()[pri:0, instance:JavaSelenium.NewJan@514646ef]" started-at="2024-02-27T09:08:03 IST" name="closeexecutionMode" finished-at="2024-02-27T09:08:03 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeexecutionMode -->
-        <test-method is-config="true" signature="closedatabase_connection()[pri:0, instance:JavaSelenium.ReleaseJan@4a83a74a]" started-at="2024-02-22T09:40:49 IST" name="closedatabase_connection" finished-at="2024-02-22T09:40:49 IST" duration-ms="0" status="PASS">
+      </class> <!-- JavaSelenium.NewJan -->
+    </test> <!-- Test2 -->
+    <test started-at="2024-02-27T09:07:01 IST" name="Test1" finished-at="2024-02-27T09:08:56 IST" duration-ms="114752">
+      <class name="JavaSelenium.CreateContactWithDataproviderTest">
+        <test-method is-config="true" signature="executionMode()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:07:01 IST" name="executionMode" finished-at="2024-02-27T09:07:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executionMode -->
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:07:01 IST" name="LaunchBrowser" finished-at="2024-02-27T09:07:12 IST" duration-ms="10378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:07:12 IST" name="LoginApp" finished-at="2024-02-27T09:07:37 IST" duration-ms="24780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+        <test-method signature="createContactWithDifferentSetsOfData(java.lang.String,java.lang.String)[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:07:37 IST" name="createContactWithDifferentSetsOfData" data-provider="dataProvider" finished-at="2024-02-27T09:08:06 IST" duration-ms="28846" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ramesh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Singh]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactWithDifferentSetsOfData -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:06 IST" name="LogOutApp" finished-at="2024-02-27T09:08:07 IST" duration-ms="1811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogOutApp -->
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:07 IST" name="LoginApp" finished-at="2024-02-27T09:08:13 IST" duration-ms="5482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+        <test-method signature="createContactWithDifferentSetsOfData(java.lang.String,java.lang.String)[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:13 IST" name="createContactWithDifferentSetsOfData" data-provider="dataProvider" finished-at="2024-02-27T09:08:30 IST" duration-ms="17439" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mahesh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Singh]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactWithDifferentSetsOfData -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:30 IST" name="LogOutApp" finished-at="2024-02-27T09:08:32 IST" duration-ms="1631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogOutApp -->
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:32 IST" name="LoginApp" finished-at="2024-02-27T09:08:37 IST" duration-ms="5274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+        <test-method signature="createContactWithDifferentSetsOfData(java.lang.String,java.lang.String)[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:37 IST" name="createContactWithDifferentSetsOfData" data-provider="dataProvider" finished-at="2024-02-27T09:08:53 IST" duration-ms="16252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Suresh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Singh]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactWithDifferentSetsOfData -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:53 IST" name="LogOutApp" finished-at="2024-02-27T09:08:55 IST" duration-ms="1686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogOutApp -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:55 IST" name="CloseBrowser" finished-at="2024-02-27T09:08:56 IST" duration-ms="424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method is-config="true" signature="closeexecutionMode()[pri:0, instance:JavaSelenium.CreateContactWithDataproviderTest@909217e]" started-at="2024-02-27T09:08:56 IST" name="closeexecutionMode" finished-at="2024-02-27T09:08:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeexecutionMode -->
+      </class> <!-- JavaSelenium.CreateContactWithDataproviderTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2024-02-27T09:07:01 IST" name="Test3" finished-at="2024-02-27T09:09:28 IST" duration-ms="147404">
+      <class name="JavaSelenium.ReleaseJan">
+        <test-method is-config="true" signature="database_connection()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:07:01 IST" name="database_connection" finished-at="2024-02-27T09:07:01 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- database_connection -->
+        <test-method is-config="true" signature="executionMode()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:07:01 IST" name="executionMode" finished-at="2024-02-27T09:07:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executionMode -->
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:07:01 IST" name="LaunchBrowser" finished-at="2024-02-27T09:07:12 IST" duration-ms="10379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:07:12 IST" name="LoginApp" finished-at="2024-02-27T09:07:26 IST" duration-ms="14085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+        <test-method signature="firstcreateContactAndValidate()[pri:1, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:07:26 IST" name="firstcreateContactAndValidate" finished-at="2024-02-27T09:08:01 IST" duration-ms="34845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcreateContactAndValidate -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:01 IST" name="LogOutApp" finished-at="2024-02-27T09:08:03 IST" duration-ms="2579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogOutApp -->
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:03 IST" name="LoginApp" finished-at="2024-02-27T09:08:08 IST" duration-ms="4982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+        <test-method signature="firstcreateContactAndValidate()[pri:1, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:08 IST" name="firstcreateContactAndValidate" finished-at="2024-02-27T09:08:26 IST" duration-ms="17813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcreateContactAndValidate -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:26 IST" name="LogOutApp" finished-at="2024-02-27T09:08:28 IST" duration-ms="1753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogOutApp -->
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:28 IST" name="LoginApp" finished-at="2024-02-27T09:08:32 IST" duration-ms="4493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+        <test-method signature="firstcreateContactAndValidate()[pri:1, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:32 IST" name="firstcreateContactAndValidate" finished-at="2024-02-27T09:08:49 IST" duration-ms="16991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcreateContactAndValidate -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:49 IST" name="LogOutApp" finished-at="2024-02-27T09:08:51 IST" duration-ms="1840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogOutApp -->
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:51 IST" name="LoginApp" finished-at="2024-02-27T09:08:56 IST" duration-ms="4574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+        <test-method signature="secondContactAndValidate()[pri:2, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:08:56 IST" name="secondContactAndValidate" finished-at="2024-02-27T09:09:08 IST" duration-ms="12619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- secondContactAndValidate -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:09:08 IST" name="LogOutApp" finished-at="2024-02-27T09:09:10 IST" duration-ms="1614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogOutApp -->
+        <test-method is-config="true" signature="LoginApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:09:10 IST" name="LoginApp" finished-at="2024-02-27T09:09:14 IST" duration-ms="3636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+        <test-method signature="thirdContactAndValidate()[pri:3, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:09:14 IST" name="thirdContactAndValidate" finished-at="2024-02-27T09:09:26 IST" duration-ms="12572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- thirdContactAndValidate -->
+        <test-method is-config="true" signature="LogOutApp()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:09:26 IST" name="LogOutApp" finished-at="2024-02-27T09:09:28 IST" duration-ms="1494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogOutApp -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:09:28 IST" name="CloseBrowser" finished-at="2024-02-27T09:09:28 IST" duration-ms="379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method is-config="true" signature="closeexecutionMode()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:09:28 IST" name="closeexecutionMode" finished-at="2024-02-27T09:09:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeexecutionMode -->
+        <test-method is-config="true" signature="closedatabase_connection()[pri:0, instance:JavaSelenium.ReleaseJan@433defed]" started-at="2024-02-27T09:09:28 IST" name="closedatabase_connection" finished-at="2024-02-27T09:09:28 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closedatabase_connection -->
       </class> <!-- JavaSelenium.ReleaseJan -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test3 -->
+  </suite> <!-- Suite -->
 </testng-results>

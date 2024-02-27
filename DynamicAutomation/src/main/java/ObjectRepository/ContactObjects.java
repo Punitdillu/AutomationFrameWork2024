@@ -36,6 +36,14 @@ public class ContactObjects {
 	public WebElement getLastName() {
 		return lastName;
 	}
+	
+	@FindBy(xpath="//input[@name='firstname']")
+	private WebElement firstName;
+	
+	public WebElement getFirstName() {
+		return firstName;
+	}
+	
 	@FindBy(xpath="(//td[text()=' Contact Information']/parent::tr/../../../../following-sibling::tr/descendant::input[@title='Save [Alt+S]'])[1]")
 	private WebElement saveButton;
 	
@@ -63,6 +71,12 @@ public class ContactObjects {
     	contactNewIcon.click();
 	}
     
+    
+    public void sendFirstName(WebDriver driver,String Firstname) {
+    	wu.waitForElementToBeVisible(driver, firstName, 20);
+		wu.mouseOverOnElement(driver, firstName);
+		lastName.sendKeys(Firstname);;
+	}
     public void sendLastName(WebDriver driver,String Lastname) {
     	wu.waitForElementToBeVisible(driver, lastName, 20);
 		wu.mouseOverOnElement(driver, lastName);

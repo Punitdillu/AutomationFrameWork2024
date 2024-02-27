@@ -1,5 +1,7 @@
 package GenericUtility;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -12,6 +14,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+
+import com.beust.jcommander.Parameter;
 
 import ObjectRepository.Login;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -21,21 +26,21 @@ public class BaseClass {
 	public  WebDriver driver=null;
 	public static WebDriver sdriver;
 
-	@BeforeSuite
+	@BeforeSuite(groups = {"smoke","sanity","regression"})
      public void database_connection() {
 		
 		System.out.println("data base connection ");
 	}
-	@BeforeTest
+	@BeforeTest(groups = {"smoke","sanity","regression"})
      public void executionMode() {
 		
 		System.out.println("Execution Mode ");
 	}
-	
-	@BeforeClass
+	//@Parameters("browserName")
+	@BeforeClass(groups = {"smoke","sanity","regression"})
     public void LaunchBrowser() throws Throwable {
 		String browserName=pfile.getCommonProperty("browser");
-
+		//String browserName
 		if(browserName.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
@@ -54,10 +59,11 @@ public class BaseClass {
 			throw new Exception("not campatible browser");
 
 		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		sdriver=driver;
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke","sanity","regression"})
     public void LoginApp() throws Throwable {
 		Login ln = new Login(driver);
 		
@@ -70,26 +76,26 @@ public class BaseClass {
 	}
 	
 
-	@AfterMethod
+	@AfterMethod(groups = {"smoke","sanity","regression"})
     public void LogOutApp() {
 		Login ln = new Login(driver);
 		ln.Logout(driver);
 		System.out.println("Logout Completed");
 	}
 	
-	@AfterClass
+	@AfterClass(groups = {"smoke","sanity","regression"})
     public void CloseBrowser() {
 		driver.quit();
 		System.out.println("Browser Closed");
 	}
 	
-	@AfterTest
+	@AfterTest(groups = {"smoke","sanity","regression"})
     public void closeexecutionMode() {
 		
 		System.out.println("Execution Mode Closed");
 	}
 	
-	@AfterSuite
+	@AfterSuite(groups = {"smoke","sanity","regression"})
      public void closedatabase_connection() {
 		
 		System.out.println("data base connection closed");

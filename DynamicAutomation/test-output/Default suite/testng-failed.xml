@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="JavaSelenium.ReleaseJan">
+      <class name="JavaSelenium.CreateContactWithDataproviderTest">
         <methods>
           <include name="LogOutApp"/>
           <include name="CloseBrowser"/>
+          <include name="createContactWithDifferentSetsOfData"/>
           <include name="closedatabase_connection"/>
           <include name="executionMode"/>
           <include name="database_connection"/>
-          <include name="createContactAndValidate"/>
           <include name="closeexecutionMode"/>
           <include name="LaunchBrowser"/>
           <include name="LoginApp"/>
         </methods>
-      </class> <!-- JavaSelenium.ReleaseJan -->
+      </class> <!-- JavaSelenium.CreateContactWithDataproviderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

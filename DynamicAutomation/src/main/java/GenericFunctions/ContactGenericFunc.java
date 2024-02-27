@@ -15,7 +15,6 @@ public class ContactGenericFunc extends BaseClass{
 	
 	public  void createContact(WebDriver driver) throws Throwable 
 	{
-		
 		ContactObjects co = new ContactObjects(driver);
 		int ran=ju.getRandomNum();
 		String LastName= edu.getExcelsheetdata("Sheet1", 1, 0) + ran;

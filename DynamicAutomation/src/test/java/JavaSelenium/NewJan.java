@@ -15,7 +15,7 @@ public class NewJan extends BaseClass {
 	
 	ExcelDataUtility edu = new ExcelDataUtility();
 	JavaUtility ju = new JavaUtility();
-	@Test(retryAnalyzer = GenericUtility.Retry_Analyzer_Implementation_class.class)
+	@Test(retryAnalyzer = GenericUtility.Retry_Analyzer_Implementation_class.class, groups = {"smoke"})
 	public  void createContactgf() throws Throwable 
 	{
 		ContactObjects co = new ContactObjects(driver);
