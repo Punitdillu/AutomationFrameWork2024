@@ -3,19 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="JavaSelenium.CreateContactWithDataproviderTest">
+      <class name="SelfAutomationScenariosPractice.TestAcionsClassWthRobotClass">
         <methods>
-          <include name="LogOutApp"/>
-          <include name="CloseBrowser"/>
-          <include name="createContactWithDifferentSetsOfData"/>
-          <include name="closedatabase_connection"/>
-          <include name="executionMode"/>
-          <include name="database_connection"/>
-          <include name="closeexecutionMode"/>
-          <include name="LaunchBrowser"/>
-          <include name="LoginApp"/>
+          <include name="logIntoActiTime"/>
         </methods>
-      </class> <!-- JavaSelenium.CreateContactWithDataproviderTest -->
+      </class> <!-- SelfAutomationScenariosPractice.TestAcionsClassWthRobotClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

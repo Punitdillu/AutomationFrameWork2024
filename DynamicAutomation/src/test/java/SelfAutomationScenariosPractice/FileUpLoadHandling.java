@@ -39,7 +39,7 @@ public class FileUpLoadHandling {
 	    rb.delay(3000);
 	    
 	    //*********// Copy the path of File
-	    StringSelection str = new StringSelection("C:\\Users\\Dell\\git\\AutomationFrameWork2024\\DynamicAutomation\\src\\main\\resources\\DATA\\Punitupdated_1655993130968_Punit Ranjan.pdf");
+	    StringSelection str = new StringSelection("C:\\Users\\dillu\\git\\AutomationFrameWork2024\\DynamicAutomation\\src\\main\\resources\\DATA\\Punitupdated_1655993130968_Punit Ranjan.pdf");
 	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 	    rb.delay(3000);
 	    
