@@ -30,7 +30,7 @@ public class SahdowRootHandling {
 	   shadowRoot.findElement(By.cssSelector("app-header>app-toolbar.toolbar-bottom>book-input-decorator>input")).sendKeys("Automation",Keys.ENTER);
 	    
 	   
-	    //driver.quit();
+	    driver.quit();
 
 	   
 	}
