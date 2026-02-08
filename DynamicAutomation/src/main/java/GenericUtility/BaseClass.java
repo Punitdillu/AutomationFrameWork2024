@@ -53,7 +53,7 @@ public class BaseClass {
 			driver=new EdgeDriver();
 		}
 		else {
-			throw new Exception("not campatible browser");
+			throw new Exception("not compatible browser");
 
 		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
