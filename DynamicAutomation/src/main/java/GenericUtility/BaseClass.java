@@ -14,9 +14,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-
-import com.beust.jcommander.Parameter;
 
 import ObjectRepository.Login;
 import io.github.bonigarcia.wdm.WebDriverManager;
