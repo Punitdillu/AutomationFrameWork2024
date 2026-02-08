@@ -19,7 +19,7 @@ import ObjectRepository.Login;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	PropertyFileUtitlity pfile = new PropertyFileUtitlity();
+	PropertyFileUtitlity file = new PropertyFileUtitlity();
 	public  WebDriver driver=null;
 	public static WebDriver sdriver;
 
@@ -36,7 +36,7 @@ public class BaseClass {
 	//@Parameters("browserName")
 	@BeforeClass(groups = {"smoke","sanity","regression"})
     public void LaunchBrowser() throws Throwable {
-		String browserName=pfile.getCommonProperty("browser");
+		String browserName= file.getCommonProperty("browser");
 		//String browserName
 		if(browserName.equals("chrome"))
 		{
@@ -64,9 +64,9 @@ public class BaseClass {
     public void LoginApp() throws Throwable {
 		Login ln = new Login(driver);
 		
-		String Username = pfile.getCommonProperty("username");
-		String Password = pfile.getCommonProperty("password");
-		String url= pfile.getCommonProperty("url");
+		String Username = file.getCommonProperty("username");
+		String Password = file.getCommonProperty("password");
+		String url= file.getCommonProperty("url");
 		ln.login(driver,Username,Password,url);
 		System.out.println("Login Completed");
 		
